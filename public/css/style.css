@@ -148,7 +148,7 @@ a {
   width: 500px;
   border: 1px solid #fff;
   border-radius: 5px;
-  margin: 100px auto;
+  margin: 0 auto;
   background-color: #fff;
   text-align: center;
 }
@@ -166,7 +166,10 @@ a {
 }
 
 .form-input input[type="text"],
-.form-input input[type="password"] {
+.form-input input[type="password"],
+.form-input input[type="email"],
+.form-input input[type="tel"],
+.form-input select {
   height: 25px;
   width: 300px;
   border-radius: 5px;

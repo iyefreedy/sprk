@@ -36,7 +36,7 @@ class Auth extends Controller
           if ($this->model('UserModel')->rows(['username' => $_POST['username']]) > 0) {
                $data = $this->model('UserModel')->find(['username' => $_POST['username']]);
 
-               if ($_POST['password'] == $data['password']) {
+               if (password_verify($_POST['password'], $data['password'])) {
                     $_SESSION['user'] = $data;
                     header('Location:' . BASE_URL . '/home');
                } else {
@@ -46,6 +46,32 @@ class Auth extends Controller
                }
           } else {
                Session::setFlash('Username ' . $_POST['username'] . ' tidak ditemukan');
+               header('Location:' . BASE_URL);
+               exit;
+          }
+     }
+
+     public function signup()
+     {
+          $data = $_POST;
+
+
+          if (!$this->model('UserModel')->rows(['username' => $data['username']]) > 0) {
+               $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+               $data['role_id'] = 1;
+               $data['token'] = base64_encode(random_bytes(32));
+               $data['photo'] = 'user-image.jpg';
+               if (!$this->model('UserModel')->insert($data)) {
+                    Session::setFlash('Berhasil mendaftar');
+                    header('Location:' . BASE_URL);
+                    exit;
+               } else {
+                    Session::setFlash('Gagal mendaftar');
+                    header('Location:' . BASE_URL);
+                    exit;
+               }
+          } else {
+               Session::setFlash('Username sudah terdaftar');
                header('Location:' . BASE_URL);
                exit;
           }

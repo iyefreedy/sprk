@@ -12,7 +12,7 @@ class UserModel
      }
 
 
-     // Mencari data dan return jumlah data / baris
+     // Find data and return number of rows
      public function rows($data)
      {
           $query = 'SELECT * FROM ' . $this->table . ' WHERE ';
@@ -65,5 +65,29 @@ class UserModel
 
           $this->db->execute();
           return $this->db->single();
+     }
+
+     public function insert($data)
+     {
+          $query = 'INSERT INTO ' . $this->table . '(';
+          foreach ($data as $key => $value) {
+               $query .= $key . ',';
+          }
+          $query = substr($query, 0, -1);
+          $query .= ') VALUES (';
+
+          foreach ($data as $key => $value) {
+               $query .= ":$key,";
+          }
+
+          $query = substr($query, 0, -1);
+          $query .= ')';
+          $this->db->query($query);
+
+          foreach ($data as $key => $value) {
+               $this->db->bind($key, $value);
+          }
+
+          return $this->db->execute() ? true : false;
      }
 }

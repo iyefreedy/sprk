@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Nunito font */
+@import url("/public/fonts/Nunito-Regular.ttf");
+
+/* Main style */
+body {
+  background-color: rgba(24, 24, 122, 0.7);
+  font-family: "Nunito", sans-serif;
+  padding-top: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Custom styles */
+
+.form-user {
+  width: 500px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin: 100px auto;
+  background-color: #fff;
+  text-align: center;
+}
+
+.form-user h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-input,
+.form-button {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.form-input input[type="text"],
+.form-input input[type="password"] {
+  height: 25px;
+  width: 300px;
+  border-radius: 5px;
+  color: #0f1a99;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: #00f;
+  height: 25px;
+  width: 300px;
+  border-radius: 5px;
+  color: #daa520;
+  font-size: 16px;
+}
+
+.alert {
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.link {
+  margin: 10px auto;
+  display: block;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffa500;
+  padding: 15px;
+  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar h1 {
+  float: left;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.navbar span {
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.navbar ul {
+  float: right;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.navbar ul li a {
+  color: #000;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #fff;
+}
+
+.clear {
+  clear: both;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.dashboard {
+  width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  background-color: #ddedfc;
+  border-radius: 10px;
+}
+
+.dashboard .user-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 15px;
+  box-shadow: 0 9px 3px #808080;
+}
+
+.detail {
+  padding: 30px;
+}
+
+.detail table {
+  text-align: center;
+  display: inline-block;
+}
+
+.detail table tr td {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.detail table tr:nth-child(even) {
+  background-color: rgba(24, 24, 122, 0.7);
+}
+
+.detail table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Topbar */
+.top-bar {
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 800px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-sizing: border-box;
+  border: 3px solid salmon;
+  border-bottom: none;
+}
+
+.link-item {
+  text-align: center;
+  flex: 1;
+  transition: 0.3s;
+  border-right: 1px groove black;
+  padding-top: 10px;
+  border-bottom: 1px groove black;
+}
+
+.link-item:last-child {
+  border-right: none;
+}
+
+.link-item h6 {
+  padding: 10px 0;
+}
+
+.link-item a {
+  color: blue;
+  transition: 0.3s;
+}
+
+.link-item a:hover {
+  color: red;
+}
+.active {
+  color: white;
+  background-color: red;
+}
+
+/* Calendar */
+.calendar-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-sizing: border-box;
+  border: 3px solid salmon;
+  border-top: none;
+}
+
+.calendar-header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.calendar-header div {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.calendar-header tr td {
+  font-weight: bold;
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.dir-left span,
+.dir-right span {
+  background-color: gray;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: large;
+}
+
+.calendar-wrapper {
+  padding: 10px;
+}
+
+.calendar-days tr th {
+  width: 115px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.calendar-body tr td {
+  height: 100px;
+  border: 1px solid black;
+  padding: 5px;
+}

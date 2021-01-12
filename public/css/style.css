@@ -356,7 +356,7 @@ a {
   justify-self: center;
 }
 
-.calendar-header tr td {
+.calendar-header td {
   font-weight: bold;
   width: 250px;
   text-align: center;
@@ -376,14 +376,14 @@ a {
   padding: 10px;
 }
 
-.calendar-days tr th {
+.calendar-days th {
   width: 115px;
   font-weight: bold;
   border: 1px solid black;
 }
 
-.calendar-body tr td {
-  height: 100px;
+.calendar-body td {
   border: 1px solid black;
   padding: 5px;
+  height: 100px;
 }

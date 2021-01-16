@@ -3,17 +3,18 @@
 class Session
 {
 
-     public static function setFlash($message)
+     public static function setFlash($message, $color)
      {
           $_SESSION['flash'] = [
                'message' => $message,
+               'color' => $color
           ];
      }
 
      public static function flash()
      {
           if (isset($_SESSION['flash'])) {
-               echo ' <div class="alert">' . $_SESSION['flash']['message'] . '</div> ';
+               echo ' <div class="alert ' . $_SESSION['flash']['color'] . '">' . $_SESSION['flash']['message'] . '</div> ';
           }
           unset($_SESSION['flash']);
      }

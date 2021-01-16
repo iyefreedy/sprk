@@ -5,7 +5,7 @@ class Home extends Controller
      public function index()
      {
           if (!isset($_SESSION['user'])) {
-               Session::setFlash('Silahkan login terlebih dahulu');
+               Session::setFlash('Silahkan login terlebih dahulu', 'danger');
                header('Location:' . BASE_URL);
                exit;
           }

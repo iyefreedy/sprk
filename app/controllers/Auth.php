@@ -40,12 +40,12 @@ class Auth extends Controller
                     $_SESSION['user'] = $data;
                     header('Location:' . BASE_URL . '/home');
                } else {
-                    Session::setFlash('Password Salah');
+                    Session::setFlash('Password Salah', 'danger');
                     header('Location:' . BASE_URL);
                     exit;
                }
           } else {
-               Session::setFlash('Username ' . $_POST['username'] . ' tidak ditemukan');
+               Session::setFlash('Username ' . $_POST['username'] . ' tidak ditemukan', 'danger');
                header('Location:' . BASE_URL);
                exit;
           }
@@ -62,16 +62,16 @@ class Auth extends Controller
                $data['token'] = base64_encode(random_bytes(32));
                $data['photo'] = 'user-image.jpg';
                if (!$this->model('UserModel')->insert($data)) {
-                    Session::setFlash('Berhasil mendaftar');
+                    Session::setFlash('Berhasil mendaftar', 'success');
                     header('Location:' . BASE_URL);
                     exit;
                } else {
-                    Session::setFlash('Gagal mendaftar');
+                    Session::setFlash('Gagal mendaftar', 'danger');
                     header('Location:' . BASE_URL);
                     exit;
                }
           } else {
-               Session::setFlash('Username sudah terdaftar');
+               Session::setFlash('Username sudah terdaftar', 'danger');
                header('Location:' . BASE_URL);
                exit;
           }

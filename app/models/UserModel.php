@@ -32,18 +32,11 @@ class UserModel
 
 
      // Mencari data dan return semua data yang di temukan
-     public function findAll($data)
+     public function findAll()
      {
-          $query = 'SELECT * FROM ' . $this->table . ' WHERE ';
-          foreach ($data as $key => $value) {
-               $query .= $key . '=' . ':' . $key;
-          }
+          $query = 'SELECT * FROM ' . $this->table;
 
           $this->db->query($query);
-
-          foreach ($data as $key => $value) {
-               $this->db->bind($key, $value);
-          }
 
           $this->db->execute();
           return $this->db->resultSet();

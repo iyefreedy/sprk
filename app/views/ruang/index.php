@@ -1,25 +1,25 @@
 <div class="calendar-wrapper">
-     <table class="calendar-header">
-          <tr>
-               <td class="dir-left"><span id="left" onclick="previous()">&lsaquo;</span></td>
-               <td class="month-name"></td>
-               <td class="dir-right"><span id="right" onclick="next()">&rsaquo;</span></td>
-          </tr>
-     </table>
-     <table class="calendar">
-          <thead class="calendar-days">
-               <tr>
-                    <th>Senin</th>
-                    <th>Selasa</th>
-                    <th>Rabu</th>
-                    <th>Kamis</th>
-                    <th>Jumat</th>
-                    <th>Sabtu</th>
-                    <th>Minggu</th>
-               </tr>
-          </thead>
-          <tbody class="calendar-body">
+     <div class="container">
+          <div class="calendar-nav">
+               <div class="cal-nav btn circle" onclick="previous()">&lsaquo;</div>
+               <div class="cal-nav month-name"></div>
+               <div class="cal-nav btn circle" onclick="next()">&rsaquo;</div>
+          </div>
+          <div class="calendar">
+               <div class="calendar-days">
+                    <tr>
+                         <th>Senin</th>
+                         <th>Selasa</th>
+                         <th>Rabu</th>
+                         <th>Kamis</th>
+                         <th>Jumat</th>
+                         <th>Sabtu</th>
+                         <th>Minggu</th>
+                    </tr>
+               </div>
+               <div class="calendar-body">
 
-          </tbody>
-     </table>
+               </div>
+          </div>
+     </div>
 </div>

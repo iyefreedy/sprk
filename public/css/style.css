@@ -1,436 +1,243 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
   list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
-/* Nunito font */
 @font-face {
-  font-family: "Nunito";
   src: url(../fonts/Nunito-Regular.ttf) format("truetype");
+  font-family: "Nunito";
 }
 
-/* Main style */
 body {
-  background-color: rgba(24, 24, 122, 0.7);
   font-family: "Nunito", sans-serif;
-  padding-top: 80px;
+  background-color: #d8d8d8;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 10px;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Custom styles */
+.clear {
+  clear: both;
+}
 
-.form-group {
-  width: 500px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  margin: 0 auto;
-  background-color: rgb(241, 237, 234);
+/* Form Login */
+.form-wrapper {
   text-align: center;
 }
 
-.form-group h1 {
-  margin-top: 30px;
-  font-size: 30px;
-  font-weight: bold;
+.form-group {
+  background-color: #ffffff;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.form-label {
+  margin-right: 10px;
 }
 
 .form-control {
-  margin: 30px auto;
-  text-align: center;
-}
-
-.form-input {
-  padding: 5px;
-  border-radius: 3px;
   width: 300px;
-  border: 1px solid gray;
-  transition: 0.4s;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #d8d8d8;
+  transition: 0.2s;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.form-input:focus {
-  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.7);
-  background-color: whitesmoke;
+.form-control:focus {
+  border: 1px solid #addeca;
+  box-shadow: 0 0 1px 3px #addeca;
+}
+
+.form-select {
+  width: 300px;
+  padding: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #d8d8d8;
+  transition: 0.2s;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .btn {
-  background-color: white;
-  color: blue;
-  width: 300px;
-  padding: 5px;
+  background-color: inherit;
+  border: 1px solid #0000ff;
+  color: #0000ff;
+  padding: 5px 30px;
   border-radius: 3px;
-  border: 1px solid blue;
+  cursor: pointer;
   transition: 0.3s;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
-  background-color: blue;
-  color: white;
-  cursor: pointer;
+  color: #ffffff;
+  background-color: #0000ff;
+}
+
+.circle {
+  border-radius: 50%;
 }
 
 .alert {
-  color: #fff;
-  padding: 10px;
-  margin: 10px auto;
+  margin-bottom: 10px;
 }
 
 .danger {
-  background-color: #f00;
+  background-color: #ff0000;
 }
 
 .success {
   background-color: #90ee90;
 }
 
-.link {
-  text-align: center;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
 /* Navbar */
-.navbar {
-  background-color: #ffa500;
-  padding: 15px;
-  box-shadow: 0 7px 1px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+
+.navbar-wrapper {
+  background-color: #6a5acd;
+  color: #dff0fd;
 }
 
-.navbar h1 {
+.navbar-wrapper > .container {
+  padding: 10px 10px;
+}
+
+.header-left {
   float: left;
-  font-weight: bold;
-  font-size: 30px;
 }
 
-.navbar span {
-  line-height: 30px;
-  margin-left: 10px;
-}
-
-.navbar ul {
+.header-right {
   float: right;
+  line-height: 50px;
 }
 
-.navbar ul li {
-  display: inline;
-  margin-right: 10px;
-  font-size: 18px;
-  line-height: 30px;
+.logo {
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.navbar ul li a {
-  color: #000;
+.nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav li a {
+  color: inherit;
   transition: 0.3s;
 }
 
-.navbar ul li a:hover {
-  color: #fff;
+.nav li a:visited {
+  color: inherit;
 }
 
-.clear {
-  clear: both;
+.nav li a:hover {
+  color: #4b4b4b;
 }
 
-.container {
-  width: 1170px;
-  margin: 0 auto;
-}
-
-.dashboard {
-  width: 600px;
-  margin: 40px auto;
+/* Dashboard wrapper */
+.dashboard-wrapper {
   text-align: center;
-  background-color: #ddedfc;
+  margin-top: 30px;
+}
+.dashboard-wrapper > .container {
+  background-color: #ffffff;
+
   border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 200, 0.6);
 }
 
-.dashboard .user-image {
-  width: 300px;
-  height: 300px;
+.user-image {
   border-radius: 50%;
-  margin-top: 15px;
-  box-shadow: 0 9px 3px #808080;
-}
-
-.detail {
-  padding: 30px;
+  width: 25%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 1px 3px rgba(219, 142, 255, 0.8);
 }
 
 .detail table {
-  text-align: center;
-  display: inline-block;
+  margin: 0 auto;
+  border: 2px solid #4b4b4b;
+  padding: 7px;
+  border-radius: 2px;
 }
 
 .detail table tr td {
-  font-size: 18px;
-  padding: 5px;
+  border-bottom: 1px solid #4b4b4b;
+  text-align: start;
 }
 
-.detail table tr:nth-child(even) {
-  background-color: rgba(24, 24, 122, 0.7);
+.edit-profile {
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
-.detail table tr:nth-child(odd) {
-  background-color: #fff;
-}
-
-/* Topbar */
-.top-bar {
-  background-color: #fff;
-  margin: 0 auto;
-  margin-top: 30px;
+/* Topbar wrapper */
+.topbar {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  width: 800px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-sizing: border-box;
-  border: 3px solid salmon;
-  border-bottom: none;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 8px;
+  justify-content: space-around;
+  border-radius: 7px 7px 0 0;
 }
 
-.link-item {
-  text-align: center;
+.topbar-wrapper > .container {
+  padding-bottom: 0;
+}
+
+.top-item {
   flex: 1;
-  transition: 0.3s;
-  border-right: 1px groove gray;
+  border-right: 1px solid #000000;
+}
+
+.top-item:last-child {
+  border: none;
+}
+
+/* Calendar wrapper */
+
+.calendar-wrapper > .container {
+  padding-top: 0;
+}
+.calendar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #ffffff;
   padding-top: 10px;
-  border-bottom: 1px groove gray;
+  border-top: 1px solid #000000;
 }
 
-.link-item:last-child {
-  border-right: none;
-}
-
-.link-item h6 {
-  padding: 10px 0;
-}
-
-.link-item a {
-  color: blue;
-  transition: 0.3s;
-}
-
-.link-item a:hover {
-  color: red;
-}
-.active {
-  color: white;
-  background-color: red;
-}
-
-/* Calendar */
-.calendar-wrapper {
-  width: 800px;
-  margin: 0 auto;
-  background-color: white;
-  box-sizing: border-box;
-  border: 3px solid salmon;
-  border-top: none;
-}
-
-.calendar-header {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-}
-
-.calendar-header div {
-  flex: 1;
-  text-align: center;
+.cal-nav {
+  font-size: 20px;
   font-weight: bold;
-  justify-self: center;
-}
-
-.calendar-header td {
-  font-weight: bold;
-  width: 250px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.dir-left span,
-.dir-right span {
-  background-color: gray;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: large;
 }
 
 .calendar {
-  margin-top: 20px;
-}
-
-.calendar-wrapper {
-  padding: 10px;
-}
-
-.calendar-days th {
-  width: 115px;
-  font-weight: bold;
-  border: 1px solid gray;
-}
-
-.calendar-body td {
-  border: 1px solid gray;
-  padding: 5px;
-  height: 85px;
-}
-
-.today {
-  background-color: lightskyblue;
-}
-
-/* Form-wrapper */
-.form-wrapper {
-  width: 800px;
-  height: 300px;
-  background-color: white;
   margin: 0 auto;
-  border: 3px solid salmon;
-  box-sizing: border-box;
-  border-top: none;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.form-table {
-}
-
-.form-caption {
-  text-align: center;
-  padding-top: 10px;
-  font-weight: bold;
+.calendar-days {
 }

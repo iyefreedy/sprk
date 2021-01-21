@@ -1,32 +1,36 @@
-<div class="top-bar">
-     <div class="link-item">
-          <a href="<?= BASE_URL; ?>/ruang">
-               <i class="fas fa-calendar-plus fa-lg fa-fw"></i>
-               <h6>Jadwal Ruangan</h6>
-          </a>
-     </div>
-     <div class="link-item">
-          <a href="<?= BASE_URL; ?>/ruang/pinjamruang">
-               <i class="fas fa-plus-circle fa-lg fa-fw"></i>
-               <h6>Pinjam Ruangan</h6>
-          </a>
-     </div>
-     <div class="link-item">
-          <a href="#">
-               <i class="fas fa-clock fa-lg fa-fw"></i>
-               <h6>Belum Direspon</h6>
-          </a>
-     </div>
-     <div class="link-item">
-          <a href="">
-               <i class="fas fa-check-circle fa-lg fa-fw"></i>
-               <h6>Disetujui</h6>
-          </a>
-     </div>
-     <div class="link-item">
-          <a href="#">
-               <i class="fas fa-times-circle fa-lg fa-fw"></i>
-               <h6>Ditolak</h6>
-          </a>
+<div class="topbar-wrapper">
+     <div class="container">
+          <div class="topbar">
+               <div class="top-item">
+                    <a href="">
+                         <i class="fas fa-calendar-alt fa-lg fa-fw"></i>
+                         <h3>Jadwal Ruangan</h3>
+                    </a>
+               </div>
+               <div class="top-item">
+                    <a href="">
+                         <i class="fas fa-calendar-plus fa-lg fa-fw"></i>
+                         <h3>Pinjam Ruangan</h3>
+                    </a>
+               </div>
+               <div class="top-item">
+                    <a href="">
+                         <i class="fas fa-clock fa-lg fa-fw"></i>
+                         <h3>Belum Direspon</h3>
+                    </a>
+               </div>
+               <div class="top-item">
+                    <a href="">
+                         <i class="fa fa-times-circle fa-lg fa-fw"></i>
+                         <h3>Dibatalkan</h3>
+                    </a>
+               </div>
+               <div class="top-item">
+                    <a href="">
+                         <i class="fa fa-check-circle fa-lg fa-fw"></i>
+                         <h3>Disetujui</h3>
+                    </a>
+               </div>
+          </div>
      </div>
 </div>

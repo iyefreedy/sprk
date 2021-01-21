@@ -36,12 +36,6 @@ function previous() {
   showCalendar(currentMonth, currentYear);
 }
 
-function jump() {
-  currentYear = parseInt(selectYear.value);
-  currentMonth = parseInt(selectMonth.value);
-  showCalendar(currentMonth, currentYear);
-}
-
 function showCalendar(month, year) {
   let firstDay = new Date(year, month).getDay();
   let monthBefore = new Date(year, month === 0 ? 11 : month - 1).getMonth();
@@ -62,9 +56,11 @@ function showCalendar(month, year) {
 
     //  Membuat kolom dan mengisinya dengan tanggal
     for (let j = 0; j < 7; j++) {
+      // Input tanggal pada bulan sebelumnya ke dalam cell yang kosong
       if (i === 0 && j < firstDay) {
         let cell = document.createElement("td");
         let cellText = document.createTextNode(dateBefore);
+        cell.style.color = "gray";
         cell.append(cellText);
         row.appendChild(cell);
         dateBefore++;

@@ -1,20 +1,26 @@
-<div class="form-group">
-     <h1>SPRK</h1>
-     <?php Session::flash(); ?>
-     <form action="<?= BASE_URL; ?>/auth/login" method="post">
+<div class="form-wrapper">
+     <div class="container">
+          <h1>SPRK</h1>
+          <p>Sistem Peminjaman Ruangan dan Kendaraan</p>
+          <h3>Universitas Al-Azhar Indonesia</h3>
 
-          <div class="form-control">
-               <input class="form-input" type="text" name="username" id="username" placeholder="Username">
-          </div>
+          <form action="<?= BASE_URL; ?>/auth/login" method="post">
+               <div class="form-group">
+                    <?php Session::flash(); ?>
+                    <table>
+                         <tr>
+                              <td><label class="form-label" for="username">Username</label></td>
+                              <td><input name="username" id="username" type="text" class="form-control"></td>
+                         </tr>
+                         <tr>
+                              <td><label class="form-label" for="password">Password</label></td>
+                              <td><input name="password" id="password" type="password" class="form-control"></td>
+                         </tr>
+                    </table>
+                    <input class="btn" type="submit" value="Login">
+                    <p>Not Registered ?<a href="<?= BASE_URL; ?>/auth/register"> Sign Up here</a></p>
+               </div>
+          </form>
 
-          <div class="form-control">
-               <input class="form-input" type="password" name="password" id="password" placeholder="Password">
-          </div>
-
-          <div class="form-control">
-               <input class="btn" type="submit" value="Login" id="login">
-          </div>
-     </form>
-
-     <a href="<?= BASE_URL; ?>/auth/register" class="link">Not registered ? Sign Up here</a>
+     </div>
 </div>

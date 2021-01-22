@@ -1,70 +1,70 @@
 <div class="form-wrapper">
-     <form action="" method="post">
-          <h1 class="form-caption">Form Peminjaman Ruangan</h1>
-          <table align="center" class="form-table">
-               <tr>
-                    <td>Nama Peminjam</td>
-                    <td>: <input class="form-input" type="text" name="name" id="name" disabled></td>
-               </tr>
-               <tr>
-                    <td>Divisi</td>
-                    <td>: <input class="form-input" type="text" name="divisi" id="divisi" disabled></td>
-               </tr>
-               <tr>
-                    <td>Contact</td>
-                    <td>: <input class="form-input" type="tel" name="contact" id="contact"></td>
-               </tr>
-               <tr>
-                    <td>Nama Kegiatan</td>
-                    <td>: <input class="form-input" type="text" name="nama_kegiatan" id="nama_kegiatan"></td>
-               </tr>
-               <tr>
-                    <td>Jenis Kegiatan</td>
-                    <td>: <select class="form-select" name="jenis_kegiatan" id="jenis_kegiatan">
-                              <option value="Internal">Seminar</option>
-                              <option value="Eksternal">Training</option>
-                              <option value="Keduanya">Lomba</option>
-                              <option value="Keduanya">Lainnya</option>
-                         </select></td>
-               </tr>
-               <tr>
-                    <td>Jenis Kegiatan</td>
-                    <td>: <select class="form-select" name="pihak" id="pihak">
-                              <option value="Internal">Internal</option>
-                              <option value="Eksternal">Eksternal</option>
-                              <option value="Keduanya">Keduanya</option>
+     <div class="container">
+          <form action="" method="post">
+               <table class="form-table">
+                    <tr>
+                         <td><label for="name" class="form-label">Nama Peminjam</label></td>
+                         <td><input type="text" class="form-control" id="name" name="name" disabled></td>
+                    </tr>
+                    <tr>
+                         <td><label for="divisi" class="form-label">Divisi</label></td>
+                         <td><input type="text" class="form-control" id="divisi" name="divisi" disabled></td>
+                    </tr>
+                    <tr>
+                         <td><label for="contact" class="form-label">Kontak</label></td>
+                         <td><input type="text" class="form-control" id="contact" name="contact"></td>
+                    </tr>
+                    <tr>
+                         <td><label for="nama_kegiatan" class="form-label">Nama Kegiatan</label></td>
+                         <td><textarea class="form-control" id="nama_kegiatan" name="nama_kegiatan"></textarea></td>
+                    </tr>
+                    <tr>
+                         <td><label for="jenis_kegiatan" class="form-label">Jenis Kegiatan</label></td>
+                         <td><select class="form-select" name="jenis_kegiatan" id="jenis_kegiatan">
+                                   <option value="Rapat">Rapat</option>
+                                   <option value="Seminar">Seminar</option>
+                                   <option value="Workshop">Workshop</option>
+                                   <option value="Training">Trainig</option>
+                                   <option value="Lomba">Lomba</option>
+                                   <option value="Lainnya">Lainnya</option>
+                              </select></td>
+                    </tr>
+                    <tr>
+                         <td><label for="waktu_kegiatan" class="form-label">Waktu Kegiatan</label></td>
+                         <td><input type="text" class="form-control" id="datetimepicker-1" name="awal_kegiatan"></td>
+                         <td><i>s/d</i></td>
+                         <td><input type="text" class="form-control" id="datetimepicker-2" name="akhir_kegiatan"></td>
+                    </tr>
+                    <tr>
+                         <td><label for="pihak" class="form-label">Melibatkan Pihak</label></td>
+                         <td><select name="pihak" id="pihak" class="form-control">
+                                   <option value="Internal">Internal</option>
+                                   <option value="Eksternal">Eksternal</option>
+                                   <option value="Internal & Eksternal">Internal & Eksternal</option>
+                              </select></td>
+                    </tr>
+                    <tr>
+                         <td><label for="undangan" class="form-label">Jumlah Undangan</label></td>
+                         <td><input type="number" class="form-control" id="undangan" name="jumlah_undangan"></td>
+                    </tr>
+                    <tr>
+                         <td><label for="ruang" class="form-label">Ruang</label></td>
+                         <td><select name="ruang" id="ruang" class="form-select">
+                                   <option value="">PILIH</option>
+                                   <option value="Serbaguna CIMB Niaga">Serbaguna CIMB Niaga</option>
+                                   <option value="Auditorium Arifin Panigoro">Auditorium Arifin Panigoro</option>
+                                   <option value="Selasar Auditorium - Lantai 3"></option>
+                              </select></td>
+                    </tr>
+                    <tr>
+                         <td><label for="proposal" class="form-label">Proposal</label></td>
+                         <td><input type="file" name="proposal" id="proposal" class="form-control"></td>
+                    </tr>
+                    <tr>
+                         <td><input type="submit" value="Submit" class="btn"></td>
+                    </tr>
 
-                         </select></td>
-               </tr>
-               <tr>
-                    <td>Tanggal Kegiatan</td>
-                    <td>: <input class="form-input" type="datetime" name="awal_kegiatan" id="awal_kegiatan"> s/d</td>
-                    <td>: <input class="form-input" type="datetime" name="akhir_kegiatan" id="akhir_kegiatan"></td>
-               </tr>
-               <tr>
-                    <td>Nama Kegiatan</td>
-                    <td>: <input class="form-input" type="text" name="jumlah_undangan" id="jumlah_undangan"></td>
-               </tr>
-               <tr>
-                    <td>Ruang</td>
-                    <td>: <select class="form-select" name="ruang" id="ruang">
-                              <option value="">PILIH</option>
-                              <option value="Selasar Lobby Luar - Lantai 1">Selasar Lobby Luar - Lantai 1</option>
-                              <option value="Selasar Lobby Dalam - Lantai 1">Selasar Lobby Dalam - Lantai 1</option>
-                              <option value="Serbaguna CIMB Niaga">Serbaguna CIMB Niaga</option>
-                              <option value="Auditorium Arifin Panigoro">Auditorium Arifin Panigoro</option>
-                              <option value="Selasar Auditorium - Lantai 3">Selasar Auditorium - Lantai 3</option>
-                              <option value="Tenda Biru">Tenda Biru</option>
-                         </select></td>
-               </tr>
-               <tr>
-                    <td>Proposal</td>
-                    <td>: <input class="form-input" type="file" name="proposal" id="proposal"></td>
-               </tr>
-               <tr>
-                    <td colspan="2"></td>
-               </tr>
-          </table>
-     </form>
-     <input class="btn" type="submit" value="Submit">
+               </table>
+          </form>
+     </div>
 </div>

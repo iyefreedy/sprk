@@ -5,8 +5,8 @@
                <div class="cal-nav month-name"></div>
                <div class="cal-nav btn circle" onclick="next()">&rsaquo;</div>
           </div>
-          <div class="calendar">
-               <div class="calendar-days">
+          <table class="calendar">
+               <thead class="calendar-days">
                     <tr>
                          <th>Senin</th>
                          <th>Selasa</th>
@@ -16,10 +16,10 @@
                          <th>Sabtu</th>
                          <th>Minggu</th>
                     </tr>
-               </div>
-               <div class="calendar-body">
+               </thead>
+               <tbody class="calendar-body">
 
-               </div>
-          </div>
+               </tbody>
+          </table>
      </div>
 </div>

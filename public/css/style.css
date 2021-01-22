@@ -28,6 +28,12 @@ a {
   clear: both;
 }
 
+input,
+select,
+textarea {
+  box-sizing: border-box;
+}
+
 /* Form Login */
 .form-wrapper {
   text-align: center;
@@ -56,6 +62,10 @@ a {
   transition: 0.2s;
   font-weight: 400;
   font-size: 16px;
+}
+
+.form-control[type="file"] {
+  background-color: #ffffff;
 }
 
 .form-control:focus {
@@ -234,10 +244,49 @@ a {
 .calendar {
   margin: 0 auto;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  padding: 10px;
 }
 
 .calendar-days {
+  width: 90%;
+}
+
+.calendar-days tr th {
+  width: 14.28571428571429%;
+}
+
+.calendar-body {
+  width: 90%;
+}
+
+.calendar-body tr td {
+  border: 1px solid #808080;
+  padding-bottom: 75px;
+}
+
+.today {
+  background-color: rgb(135, 206, 255);
+}
+
+/* Form pinjam Ruang */
+
+.form-table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 1em;
+}
+
+.form-wrapper > .container {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-top: 1px solid #000000;
+}
+
+.form-table tr {
+  border-bottom: 1px solid #808080;
+}
+
+.form-table tr td {
+  text-align: start;
 }

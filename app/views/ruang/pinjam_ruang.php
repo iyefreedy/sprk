@@ -1,21 +1,22 @@
 <div class="form-wrapper">
      <div class="container">
-          <form action="" method="post">
+          <?= Session::flash(); ?>
+          <form action="<?= BASE_URL; ?>/ruang/pinjamruang" method="post" enctype="multipart/form-data">
                <table class="form-table">
                     <tr>
                          <td><label for="name" class="form-label">Nama Peminjam</label></td>
-                         <td><input type="text" class="form-control" id="name" name="name" disabled></td>
+                         <td><input type="text" class="form-control" id="nama_peminjam" name="nama_peminjam" readonly value="<?= $_SESSION['user']['name']; ?>"></td>
                     </tr>
                     <tr>
                          <td><label for="divisi" class="form-label">Divisi</label></td>
-                         <td><input type="text" class="form-control" id="divisi" name="divisi" disabled></td>
+                         <td><input type="text" class="form-control" id="divisi" name="divisi" readonly value="<?= $_SESSION['user']['divisi']; ?>"></td>
                     </tr>
                     <tr>
-                         <td><label for="contact" class="form-label">Kontak</label></td>
-                         <td><input type="text" class="form-control" id="contact" name="contact"></td>
+                         <td><label for=" contact" class="form-label">Kontak</label></td>
+                         <td><input type="text" class="form-control" id="contact" name="contact" value="<?= $_SESSION['user']['contact']; ?>"></td>
                     </tr>
                     <tr>
-                         <td><label for="nama_kegiatan" class="form-label">Nama Kegiatan</label></td>
+                         <td><label for=" nama_kegiatan" class="form-label">Nama Kegiatan</label></td>
                          <td><textarea class="form-control" id="nama_kegiatan" name="nama_kegiatan"></textarea></td>
                     </tr>
                     <tr>

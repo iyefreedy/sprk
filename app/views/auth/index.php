@@ -1,5 +1,5 @@
 <div class="form-wrapper">
-     <div class="container">
+     <div class="container auth">
           <h1>SPRK</h1>
           <p>Sistem Peminjaman Ruangan dan Kendaraan</p>
           <h3>Universitas Al-Azhar Indonesia</h3>
